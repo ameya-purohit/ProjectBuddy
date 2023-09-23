@@ -65,7 +65,7 @@ app.post('/projectEntry', (req, res) => {
     const projectData = req.body;
     const newProject = new Project(projectData); 
 
-    newProject.save() 
+    newProject.save()  
         .then(() => { 
             res.send('This item has been saved to the database');
         })
@@ -79,3 +79,4 @@ app.post('/projectEntry', (req, res) => {
 app.listen(port, () => {
     console.log(`The application started successfully on port ${port}`);
 }); 
+
