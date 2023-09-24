@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
-// Database Connection
+// Database Connection (db of that name must exist) 
 mongoose.connect('mongodb://localhost/project-db', { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 
